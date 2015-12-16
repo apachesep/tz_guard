@@ -7,7 +7,7 @@
 	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
 	<authorEmail>support@templaza.com</authorEmail>
 	<authorUrl>www.templaza.com</authorUrl>
-	<version>1.1</version>
+	<version>1.2</version>
 	<description>Plugin TZ Guard for Security system</description>
 	<files>                
 		<filename plugin="tz_guard">tz_guard.php</filename>
@@ -19,27 +19,33 @@
 		<language tag="en-GB">en-GB/en-GB.plg_system_tz_guard.sys.ini</language>
 	</languages>
 	<config>
-	<fields name="params">
-	<fieldset name="basic">
-		<field name="securitycode"
-				size="50" type="text"
-				default=""
-				label="MOD_TZ_GUARD_SECURITY_CODE_LABEL" 
-				description="MOD_TZ_GUARD_SECURITY_CODE_DESC"></field>
-		<field name="black_ip" 
-				type="textarea" 
-				default="" 
-				label="MOD_TZ_GUARD_BLACK_IP_LABEL" 
-				description="MOD_TZ_GUARD_BLACK_IP_DESC" cols="35" rows="4" />
-		<field name="bot_enable" 
-				type="radio" 
-				default="1"
-				label="MOD_TZ_GUARD_BOT_ACCESS_LABEL" 
-				description="MOD_TZ_GUARD_BOT_ACCESS_DESC">
-	        <option value="1">Yes</option>
-			<option value="0">No</option>
-        </field>
-	</fieldset>
-	</fields>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="securitycode"
+						size="50" type="text"
+						default=""
+						label="MOD_TZ_GUARD_SECURITY_CODE_LABEL" 
+						description="MOD_TZ_GUARD_SECURITY_CODE_DESC"></field>
+				<field name="black_ip" 
+						type="textarea" 
+						default="" 
+						label="MOD_TZ_GUARD_BLACK_IP_LABEL" 
+						description="MOD_TZ_GUARD_BLACK_IP_DESC" cols="35" rows="4" />
+				<field name="bot_enable" 
+						type="radio" 
+						default="1"
+						label="MOD_TZ_GUARD_BOT_ACCESS_LABEL" 
+						description="MOD_TZ_GUARD_BOT_ACCESS_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+		</fields>
 	</config>
+	
+	<updateservers>
+		<server type="extension" pirority="1" name="TZ Guard Plugin">
+			<![CDATA[http://joomla.templaza.net/extensions/updates/plugins/tz_guard_update.xml]]>
+		</server>
+	</updateservers>
 </extension>
